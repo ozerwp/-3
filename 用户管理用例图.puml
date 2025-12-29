@@ -1,0 +1,34 @@
+@startuml 用户管理用例图
+
+left to right direction
+
+actor 学生
+actor 教师
+actor 管理员
+
+rectangle "用户管理模块" {
+  usecase "用户注册" as UC001
+  usecase "用户登录" as UC002
+  usecase "用户信息查询" as UC003
+  usecase "用户信息修改" as UC004
+  usecase "用户角色管理" as UC005
+  usecase "用户权限分配" as UC006
+}
+
+学生 --> UC001
+学生 --> UC002
+学生 --> UC003
+学生 --> UC004
+
+教师 --> UC001
+教师 --> UC002
+教师 --> UC003
+教师 --> UC004
+
+管理员 --> UC002
+管理员 --> UC003
+管理员 --> UC004
+管理员 --> UC005
+管理员 --> UC006
+
+@enduml
